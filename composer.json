@@ -1,0 +1,13 @@
+{
+    "name": "techdivision/defer-css",
+    "type": "neos-package",
+    "description": "Neos Defer CSS package with preload option",
+    "require": {
+        "neos/fusion-afx": "*"
+    },
+    "extra": {
+        "neos": {
+            "package-key": "TechDivision.DeferCss"
+        }
+    }
+}

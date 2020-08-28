@@ -1,0 +1,12 @@
+prototype(TechDivision.DeferCss:Atom.StylesheetTag) < prototype(Neos.Fusion:Component) {
+    href = Neos.Fusion:ResourceUri {
+        path = null
+    }
+
+    renderer = afx`
+        <link href={props.href}
+              media="all"
+              rel="stylesheet"
+        />
+    `
+}

@@ -1,0 +1,22 @@
+prototype(TechDivision.DeferCss:Atom.DeferCss) < prototype(Neos.Fusion:Component) {
+    href = Neos.Fusion:ResourceUri {
+        path = null
+    }
+    onload = ${'this.media=\'all\';'}
+
+    renderer = afx`
+        <link href={props.href}
+              rel="preload"
+              as="style"
+              type="text/css"
+        />
+        <link href={props.href}
+              media="print"
+              rel="stylesheet"
+              onload={props.onload}
+        />
+        <noscript>
+            <link href={props.href} media="all" rel="stylesheet" />
+        </noscript>
+    `
+}
